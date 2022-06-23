@@ -111,7 +111,7 @@ address {
   background-image: linear-gradient(#2f303a66 0%, #2f303a66 100%),
     url(../images/background-hero.jpg);
   background-position: top -120px center;
-  background-size: 1200px contain;
+  background-size: 100% contain;
 }
 .hero,
 .footer {
