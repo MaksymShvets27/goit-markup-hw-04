@@ -34,16 +34,16 @@ img {
   max-width: 100%;
   height: auto;
 }
-address{
+address {
   font-style: normal;
 }
 .container {
   width: 1200px;
- margin: 0 auto;
- padding: 0 15px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-.section{
+.section {
   padding-top: 94px;
   padding-bottom: 94px;
 }
@@ -65,7 +65,7 @@ address{
   display: flex;
   align-items: center;
 }
-.header .list{
+.header .list {
   display: flex;
 }
 
@@ -86,13 +86,13 @@ address{
 .nav-link:not(:last-child) {
   margin-right: 50px;
 }
-.nav{
+.nav {
   margin-right: auto;
 }
 .contact {
   color: var(--main-color);
 }
-.link{
+.link {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -108,6 +108,10 @@ address{
 .hero {
   padding: 200px 0;
   text-align: center;
+  background-image: linear-gradient(#2f303a66 0%, #2f303a66 100%),
+    url(../images/background-hero.jpg);
+  background-position: top -120px center;
+  background-size: 100% contain;
 }
 .hero,
 .footer {
@@ -151,16 +155,19 @@ address{
   box-shadow: 0px 1px 1px 0px #00000024;
   box-shadow: 0px 1px 3px 0px #0000001f;
 }
-.specialties p{
+.specialties p {
   line-height: 1.71;
   /*24px or 171% */
 }
 .wework .list,
 .specialties .list,
-.team .list{
+.team .list {
   display: flex;
 }
-.wework .list-item:not(:last-child){
+.wework {
+  padding-top: 0;
+}
+.wework .list-item:not(:last-child) {
   margin-right: 30px;
 }
 .title {
@@ -179,7 +186,7 @@ address{
 .specialties .list-item {
   width: 270px;
 }
-.specialties .list-item:not(:last-child){
+.specialties .list-item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -201,31 +208,31 @@ address{
   text-align: center;
   margin-bottom: 50px;
 }
-.text-team-unit{
+.text-team-unit {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.list-unit:not(:last-child){
+.list-unit:not(:last-child) {
   margin-right: 30px;
 }
 .list-unit .title {
   margin-bottom: 10px;
 }
-.team p{
+.team p {
   font-weight: 400;
-font-size: 16px;
-line-height: 1.18;
+  font-size: 16px;
+  line-height: 1.18;
 }
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.footer .log{
+.footer .log {
   display: block;
   margin-right: 0;
   margin-bottom: 20px;
 }
-.footer .link{
+.footer .link {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
