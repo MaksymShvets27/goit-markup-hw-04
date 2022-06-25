@@ -13,6 +13,7 @@
   /* сетка */
   --indent: 30px;
   --items: 3;
+  --main-icon-color: #afb1b8;
 }
 
 body {
@@ -82,7 +83,9 @@ address {
   letter-spacing: 0.03em;
   margin-right: 93px;
 }
-.contact-link:not(:last-child),
+.contact-link:not(:last-child) {
+  margin-right: 30px;
+}
 .nav-link:not(:last-child) {
   margin-right: 50px;
 }
@@ -91,6 +94,11 @@ address {
 }
 .contact {
   color: var(--main-color);
+}
+.header .contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 .link {
   font-weight: 500;
@@ -104,14 +112,19 @@ address {
 .adress:hover,
 .adress:focus {
   color: var(--blue-color);
+  fill: var(--blue-color);
 }
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 200px 0;
   text-align: center;
   background-image: linear-gradient(#2f303a66 0%, #2f303a66 100%),
     url(../images/background-hero.jpg);
-  background-position: top -120px center;
-  background-size: 100% contain;
+  background-position: top -100px center;
+  background-size: cover;
 }
 .hero,
 .footer {
@@ -161,7 +174,8 @@ address {
 }
 .wework .list,
 .specialties .list,
-.team .list {
+.team .list,
+.clients .list {
   display: flex;
 }
 .wework {
@@ -170,6 +184,12 @@ address {
 .wework .list-item:not(:last-child) {
   margin-right: 30px;
 }
+.spec-icon-area {
+  display: flex;
+  padding: 25px 100px;
+  background-color: var(--comand-background);
+  margin-bottom: 30px;
+}
 .title {
   font-weight: 500;
   font-size: 16px;
@@ -177,6 +197,7 @@ address {
   /* identical to box height */
   color: var(--title-color);
 }
+.join .title,
 .specialties .title {
   font-weight: 700;
   font-size: 14px;
@@ -201,16 +222,24 @@ address {
 }
 
 .wework .title,
-.team-title {
+.team-title,
+.clients .title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   margin-bottom: 50px;
 }
+
 .text-team-unit {
   padding-top: 30px;
+  margin-bottom: 16px;
+}
+.list-unit {
   padding-bottom: 30px;
+  box-shadow: 0px 2px 1px 0px #00000033;
+  box-shadow: 0px 1px 1px 0px #00000024;
+  box-shadow: 0px 1px 3px 0px #0000001f;
 }
 .list-unit:not(:last-child) {
   margin-right: 30px;
@@ -223,9 +252,84 @@ address {
   font-size: 16px;
   line-height: 1.18;
 }
+.list-social {
+  justify-content: center;
+  gap: 10px;
+}
+.social-team-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+}
+.social-icon,
+.client-icon {
+  fill: var(--main-icon-color);
+}
+.social-team-link:hover,
+.social-team-link:focus {
+  background-color: var(--blue-color);
+  border-radius: 50%;
+}
+.social-team-link:hover .social-icon,
+.social-team-link:focus .social-icon {
+  fill: var(--white-color);
+}
+.clients .list {
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.clients-item {
+  width: 170px;
+  height: 92px;
+  padding: 16px 32px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-item:hover,
+.clients-item:focus {
+  border-color: var(--blue-color);
+}
+.client-link:hover .client-icon,
+.client-link:focus .client-icon {
+  fill: var(--blue-color);
+}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
+}
+.footer .container {
+  display: flex;
+}
+.adress {
+  margin-right: 70px;
+}
+.join {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12px;
+}
+.join .title {
+  color: var(--white-color);
+}
+
+.join .list {
+  display: flex;
+}
+.join .social-icon {
+  fill: var(--white-color);
+}
+.join .social-team-link {
+  border-radius: 50%;
+  background-color: #ffffff1a;
+}
+
+.join .social-team-link:hover,
+.join .social-team-link:focus {
+  background-color: var(--blue-color);
 }
 .footer .log {
   display: block;
@@ -292,6 +396,12 @@ address {
 .article {
   flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
   margin: calc(var(--indent) / 2);
+}
+.article:hover,
+.article:focus {
+  box-shadow: 1px 4px 6px 0px #00000029;
+  box-shadow: 0px 4px 4px 0px #0000000f;
+  box-shadow: 0px 1px 1px 0px #0000001f;
 }
 .article-text {
   border: 1px solid #eeeeee;
