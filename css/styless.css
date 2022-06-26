@@ -98,7 +98,9 @@ address {
 .header .contact {
   display: flex;
   align-items: center;
-  gap: 10px;
+}
+.header svg {
+  margin-right: 10px;
 }
 .link {
   font-weight: 500;
@@ -123,8 +125,9 @@ address {
   text-align: center;
   background-image: linear-gradient(#2f303a66 0%, #2f303a66 100%),
     url(../images/background-hero.jpg);
-  background-position: top -100px center;
+  background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
 }
 .hero,
 .footer {
@@ -156,18 +159,13 @@ address {
   font-size: 16px;
   line-height: 1.88;
   /* identical to box height,30px or 188% */
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .button:hover,
 .button:focus {
   background-color: var(--hoverbutton-background);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.list-unit {
-  background-color: var(--white-color);
-  box-shadow: 0px 2px 1px 0px #00000033;
-  box-shadow: 0px 1px 1px 0px #00000024;
-  box-shadow: 0px 1px 3px 0px #0000001f;
-}
+
 .specialties p {
   line-height: 1.71;
   /*24px or 171% */
@@ -230,16 +228,15 @@ address {
   text-align: center;
   margin-bottom: 50px;
 }
-
+.team-title {
+  margin-bottom: 16px;
+}
 .text-team-unit {
   padding-top: 30px;
-  margin-bottom: 16px;
 }
 .list-unit {
   padding-bottom: 30px;
-  box-shadow: 0px 2px 1px 0px #00000033;
-  box-shadow: 0px 1px 1px 0px #00000024;
-  box-shadow: 0px 1px 3px 0px #0000001f;
+  box-shadow: 0px 2px 1px 0px #00000033, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f;
 }
 .list-unit:not(:last-child) {
   margin-right: 30px;
@@ -251,10 +248,13 @@ address {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
+  margin-bottom: 16px;
 }
 .list-social {
   justify-content: center;
-  gap: 10px;
+}
+.social-unit:not(:last-child) {
+  margin-right: 10px;
 }
 .social-team-link {
   display: flex;
@@ -262,41 +262,34 @@ address {
   align-items: center;
   width: 44px;
   height: 44px;
-}
-.social-icon,
-.client-icon {
   fill: var(--main-icon-color);
 }
+
 .social-team-link:hover,
 .social-team-link:focus {
   background-color: var(--blue-color);
   border-radius: 50%;
-}
-.social-team-link:hover .social-icon,
-.social-team-link:focus .social-icon {
   fill: var(--white-color);
 }
-.clients .list {
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
+
+.clients-item:not(:last-child) {
+  margin-right: 30px;
 }
-.clients-item {
+.client-link {
+  display: flex;
   width: 170px;
   height: 92px;
   padding: 16px 32px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  fill: var(--main-icon-color);
 }
-
-.clients-item:hover,
-.clients-item:focus {
+.client-link:hover,
+.client-link:focus {
   border-color: var(--blue-color);
-}
-.client-link:hover .client-icon,
-.client-link:focus .client-icon {
   fill: var(--blue-color);
 }
+
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -381,9 +374,7 @@ address {
 .filtr:focus {
   color: var(--white-color);
   background-color: var(--blue-color);
-  box-shadow: 0px 2px 2px 0px #0000001f;
-  box-shadow: 0px 1px 2px 0px #00000014;
-  box-shadow: 0px 3px 1px 0px #0000001a;
+  box-shadow: 0px 2px 2px 0px #0000001f, 0px 1px 2px 0px #00000014, 0px 3px 1px 0px #0000001a;
 }
 .list-filtr-unit:not(:last-child) {
   margin-right: 10px;
@@ -397,11 +388,14 @@ address {
   flex-basis: calc((100% - var(--indent) * var(--items)) / var(--items));
   margin: calc(var(--indent) / 2);
 }
-.article:hover,
-.article:focus {
-  box-shadow: 1px 4px 6px 0px #00000029;
-  box-shadow: 0px 4px 4px 0px #0000000f;
-  box-shadow: 0px 1px 1px 0px #0000001f;
+.article-link {
+  display: block;
+  text-decoration: none;
+  color: var(--main-color);
+}
+.article-link:hover,
+.article-link:focus {
+  box-shadow: 1px 4px 6px 0px #00000029, 0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
 }
 .article-text {
   border: 1px solid #eeeeee;
